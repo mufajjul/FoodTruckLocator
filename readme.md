@@ -10,7 +10,8 @@ There are three components to the project:
 
 ## Architecture
 
-TBD
+![Screenshot 2022-05-11 at 10 31 14](https://user-images.githubusercontent.com/3224778/167818259-4179406c-38c2-46f0-9c58-ba5ee4c9fc1d.png)
+
 
 
 
