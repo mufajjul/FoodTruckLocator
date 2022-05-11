@@ -8,6 +8,8 @@ from os import environ as env
 
 load_dotenv()
 
+
+# Invoke the REST endpoint to get the food truck locations
 def get_food_places(lat, lng):
     print ("lat: %s" % lat)
     
@@ -17,7 +19,7 @@ def get_food_places(lat, lng):
     
     return r.json()
     
-    
+# CLI options    
 if __name__ == '__main__':
 
     parser = ArgumentParser(prog='flt', description='Service truck locator cli')

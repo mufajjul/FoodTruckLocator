@@ -28,6 +28,8 @@ def apply_caching(response):
 def home():
         return "<h3>welcome to Food sharing service</h3>"
 
+
+# This is the endpoint to get the nearest food truck locations in JSON format
 @app.route('/fts/locator/', methods =['GET'])
 def get_food_places():
 

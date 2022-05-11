@@ -11,10 +11,12 @@ __license__ = "MIT"
 
 _logger = logging.getLogger(__name__)
 
+
+# This class is used to find the nearest food truck places
 class FTLProcessor:
     
     def __init__(self):        
-        print ('') 
+        pass
     
     def get_nearest_places(self, locations_df, lat, lng):
 
@@ -22,8 +24,14 @@ class FTLProcessor:
     
         truck_geo_coor = np.array(locations_df[['Latitude', 'Longitude']])
         current_geo_coor = [lat, lng]
-        locations_df['distance_output'] = [distance.euclidean (current_geo_coor, location)  for location in truck_geo_coor]    
+        
+        # calculate the distance between the current location and the food truck locations
+        locations_df['distance_output'] = [distance.euclidean (current_geo_coor, location)  for location in truck_geo_coor]   
+        
+        # Retrieve the top five nearest food truck locations 
         top_five_loc = locations_df.sort_values(by=['distance_output'])[['Latitude', 'Longitude']][:5]
+        
+        # conver the dataframe to JSON
         json_coor = top_five_loc.reset_index().drop(columns=['index']).to_json()
 
         end = timer()
