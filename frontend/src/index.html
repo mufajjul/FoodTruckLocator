@@ -1,0 +1,21 @@
+<html>        
+    <head lang="en">  
+        <meta name="viewport" content="width=device-width">
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBz9zejP3wBZ6VAGi1jVod3hYk2A2UAQ-4"></script>
+        <script type="text/javascript" src="./script/maps.js"></script>
+    </head>
+
+    <body>
+        
+        <form  id ="map_form"> 
+            <label><b>Enter latitude</b></label>
+            <input type="text" name="lat" id="lat">
+            <label><b>Enter longtitude</b></label>
+            <input type="text" name="lng" id="lng">
+            <input type="submit" onclick="initialize_map()">
+        </form>
+        
+          <div id="map"  style="width:900px;height:500px;"></div>
+        
+    </body>
+</html>
